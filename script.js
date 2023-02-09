@@ -19,3 +19,9 @@ function generateParagraph() {
   }
   return paragraph;
 }
+
+document.getElementById("copy-button").addEventListener("click", function() {
+  const textarea = document.getElementById("generated-text");
+  textarea.select();
+  document.execCommand("copy");
+});
