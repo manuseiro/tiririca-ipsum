@@ -4,28 +4,4 @@ body {
   background: #FF000B;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-label {
-  margin-bottom: 10px;
-}
-
-select {
-  margin-bottom: 20px;
-}
-
-textarea {
-  margin-top: 20px;
-}
 /*FORMATACAO*/
-
