@@ -1,7 +1,15 @@
 
-body {
-  font-family: Arial, sans-serif;
-  background: #FF000B;
+html, body{ margin: 0;
+  background-color: #dc3545;}
+#header{
+  height: 100vh;
+  width: 100vw;
+  background:#FFFFFF url('img/tiririca-ipsum2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: right;
 }
-
-/*FORMATACAO*/
+/**/
+.main{
+  background-color: #dc3545;
+}
