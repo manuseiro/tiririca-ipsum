@@ -1,7 +1,9 @@
 <h4 align="center"> 
 	🚧  Tiririca Ipsum 🚀 Em construção...  🚧
 </h4>
-![Tiririca Ipsum](screenshots/capa-tiririca-ipsum.jpg)
+<h1 align="center">
+  <img alt="Tiririca Ipsum" title="#TiriricaIpsum" src="https://github.com/manuseiro/tiririca-ipsum/blob/main/screenshots/capa-tiririca-ipsum.jpg" />
+</h1>
 
 # Tiririca-ipsum
 Este é um gerador Javascript Lorem Ipsum, um gerador de texto fictício brasileiro.
