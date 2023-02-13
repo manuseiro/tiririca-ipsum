@@ -1,3 +1,4 @@
+/*TEXTO BASE*/
 const baseText = [
 "Essa música, eu tava cantando ali na cidade grande, Aí um soldado gostou tanto, Que me levou pra cantar na cadeia, Florentina é o nome dela",
 "Florentina, Florentina, Florentina de Jesus, Não sei se tu me amas, Pra que tu me seduz?",
@@ -16,7 +17,7 @@ const baseText = [
 "Agora, eu vou cantar pra vocês. Uma música de Roberto Carlos que chama",
 "Florentina, Florentina, Florentina de Jesus, Não sei se tu me amas", "Pra que tu me seduz? Florentina, Florentina de Jesus, Não sei se tu me amas, Pra que tu me seduz?"
 ];
-
+/*GERAR TEXTO*/
 function generateText() {
   const paragraphs = document.getElementById("paragraphs").value;
   let text = "";
@@ -25,7 +26,7 @@ function generateText() {
   }
   document.getElementById("generated-text").value = text;
 }
-
+/*GERAR PARAGRAPH*/
 function generateParagraph() {
   const sentences = Math.floor(Math.random() * 5) + 3;
   let paragraph = "";
@@ -34,9 +35,17 @@ function generateParagraph() {
   }
   return paragraph;
 }
-
+/*BOTAO COPIA TEXTO*/
 document.getElementById("copy-button").addEventListener("click", function() {
   const textarea = document.getElementById("generated-text");
   textarea.select();
   document.execCommand("copy");
+});
+/*TITULO DA ABA DO NAVEGADOR*/
+let docTitle = document.title;
+window.addEventListener("blur", () => {
+  document.title = "Eu vou morreeee";
+});
+window.addEventListener("focus", () => {
+  document.title = docTitle;
 });
