@@ -12,22 +12,22 @@ const baseText = [
 "Chega de tanta, Florentina, Florentina, Florentina de Jesus, Não sei se tu me amas, Pra que tu me seduz?",
 "Isso é uma coisa que todo mundo abusa, Esse negócio de, Florentina, Florentina, Florentina de Jesus, Não sei se tu me amas, Pra que tu me seduz?",
 "Eu num canto mais esse negócio de, Florentina, Florentina, Florentina de Jesus, Não sei se tu me amas, Pra que tu me seduz?",
-"Agora eu já parei com esse negócio de, Florentina, Florentina, Florentina de Jesus, Não sei se tu me amas, Pra que tu me seduz?",
+"Agora eu já parei com esse negócio de, Florentina, Florentina, FloregeraTextntina de Jesus, Não sei se tu me amas, Pra que tu me seduz?",
 "Eu quero é cegar do sovaco. Se eu cantar esse negócio de", "Florentina, Florentina, Florentina de Jesus, Não sei se tu me amas, Pra que tu me seduz?",
 "Agora, eu vou cantar pra vocês. Uma música de Roberto Carlos que chama",
 "Florentina, Florentina, Florentina de Jesus, Não sei se tu me amas", "Pra que tu me seduz? Florentina, Florentina de Jesus, Não sei se tu me amas, Pra que tu me seduz?"
 ];
 /*GERAR TEXTO*/
-function generateText() {
+function geraText() {
   const paragraphs = document.getElementById("paragraphs").value;
   let text = "";
   for (let i = 0; i < paragraphs; i++) {
-    text += generateParagraph() + "\n\n";
+    text += geraParagraph() + "\n\n";
   }
-  document.getElementById("generated-text").value = text;
+  document.getElementById("gera-Text").value = text;
 }
 /*GERAR PARAGRAPH*/
-function generateParagraph() {
+function geraParagraph() {
   const sentences = Math.floor(Math.random() * 5) + 3;
   let paragraph = "";
   for (let i = 0; i < sentences; i++) {
@@ -35,16 +35,18 @@ function generateParagraph() {
   }
   return paragraph;
 }
-/*BOTAO COPIA TEXTO*/
-document.getElementById("copy-button").addEventListener("click", function() {
-  const textarea = document.getElementById("generated-text");
+/*BOTAO DE COPIA TEXTO*/
+function copyText() {
+  const textarea = document.getElementById("gera-Text");
+  const copyButton = document.getElementById("copy-button");
   textarea.select();
-  document.execCommand("copy");
-});
+  navigator.clipboard.writeText(textarea.value);
+
+}
 /*TITULO DA ABA DO NAVEGADOR*/
 let docTitle = document.title;
 window.addEventListener("blur", () => {
-  document.title = "Eu vou morreeee";
+  document.title = "Volta condenado, infeliz. Cão do Inferno. Nojento!";
 });
 window.addEventListener("focus", () => {
   document.title = docTitle;
