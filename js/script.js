@@ -1,4 +1,4 @@
-/*TEXTO BASE*/
+// Array com o texto base
 const baseText = [
 "Essa música, eu tava cantando ali na cidade grande, Aí um soldado gostou tanto, Que me levou pra cantar na cadeia, Florentina é o nome dela",
 "Florentina, Florentina, Florentina de Jesus, Não sei se tu me amas, Pra que tu me seduz?",
@@ -17,37 +17,44 @@ const baseText = [
 "Agora, eu vou cantar pra vocês. Uma música de Roberto Carlos que chama",
 "Florentina, Florentina, Florentina de Jesus, Não sei se tu me amas", "Pra que tu me seduz? Florentina, Florentina de Jesus, Não sei se tu me amas, Pra que tu me seduz?"
 ];
-/*GERAR TEXTO*/
+
+// Gera o texto com base no número de parágrafos selecionado
 function geraText() {
   const paragraphs = document.getElementById("paragraphs").value;
-  let text = "";
-  for (let i = 0; i < paragraphs; i++) {
-    text += geraParagraph() + "\n\n";
-  }
+  const text = Array.from({ length: paragraphs }, () => geraParagraph()).join("\n\n");
   document.getElementById("gera-Text").value = text;
 }
-/*GERAR PARAGRAPH*/
+
+// Gera um parágrafo aleatório com base nas frases do texto base
 function geraParagraph() {
   const sentences = Math.floor(Math.random() * 5) + 3;
-  let paragraph = "";
-  for (let i = 0; i < sentences; i++) {
-    paragraph += baseText[Math.floor(Math.random() * baseText.length)] + " ";
-  }
+  const paragraph = Array.from({ length: sentences }, () => getRandomElement(baseText)).join(" ");
   return paragraph;
 }
-/*BOTAO DE COPIA TEXTO*/
+
+// Retorna um elemento aleatório de um array
+function getRandomElement(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
+// Copia o texto gerado para a área de transferência
 function copyText() {
   const textarea = document.getElementById("gera-Text");
-  const copyButton = document.getElementById("copy-button");
   textarea.select();
-  navigator.clipboard.writeText(textarea.value);
-
+  document.execCommand("copy");
 }
-/*TITULO DA ABA DO NAVEGADOR*/
-let docTitle = document.title;
-window.addEventListener("blur", () => {
-  document.title = "Volta condenado, infeliz. Cão do Inferno. Nojento!";
-});
-window.addEventListener("focus", () => {
+
+// Restaura o título da aba do navegador quando a janela está em foco
+function restoreTitle() {
   document.title = docTitle;
+}
+
+// Título da aba do navegador
+const docTitle = document.title;
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") {
+    restoreTitle();
+  } else {
+    document.title = "Volta condenado, infeliz. Cão do Inferno. Nojento!";
+  }
 });
