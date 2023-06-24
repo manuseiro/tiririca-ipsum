@@ -1,25 +1,44 @@
-<h4 align="center"> 
-	🚧  Tiririca Ipsum 🚀 Em construção...  🚧
-</h4>
-<h1 align="center">
-  <img alt="Tiririca Ipsum" title="#TiriricaIpsum" src="https://github.com/manuseiro/tiririca-ipsum/blob/main/screenshots/capa-tiririca-ipsum.jpg" />
-</h1>
+# 🚧  Tiririca Ipsum 🚀 Em construção...  🚧
 
-# Tiririca-ipsum
-Este é um gerador Javascript Lorem Ipsum, um gerador de texto fictício brasileiro.
+Tiririca Ipsum is a fun lorem ipsum generator inspired by the Brazilian comedian Tiririca. It generates random paragraphs of text based on a collection of phrases from Tiririca's songs and jokes.
 
-## 🛠 Tecnologias
+![Tiririca Ipsum](img/tiririca-ipsum2.png)
 
-As seguintes ferramentas foram usadas na construção do projeto:
+## How to Use
 
-- [JavaScript](https://www.javascript.com/)
-- [Bootstrap 5.3](https://getbootstrap.com/)
+1. Open the `index.html` file in your web browser.
 
-### Features
+2. Select the number of paragraphs you want to generate from the dropdown menu.
 
-- [x] Gerar Texto aleatorios
-- [x] Botão Copiar Texto gerado
-- [x] Selecionar quantidade de Paragraphos
-- [ ] Extenção para navegador
-- [ ] Extenção para notepad++
-- [ ] Extenção para VS Code
+3. Click the "Deixa eu ver!" button to generate the text.
+
+4. The generated text will appear in the textarea below.
+
+5. You can copy the generated text by clicking the "Copiar texto" button. The text will be copied to your clipboard.
+
+## Technologies Used
+
+- HTML
+- CSS (Bootstrap 5)
+- JavaScript
+
+## Project Structure
+
+The project structure is as follows:
+
+- `index.html`: The main HTML file that contains the structure of the webpage.
+- `style.css`: The CSS file that styles the webpage.
+- `js/script.js`: The JavaScript file that contains the logic for generating and copying the text.
+
+## Credits
+
+This project is available on [GitHub](https://github.com/manuseiro/tiririca-ipsum) and was created by [Manuel](https://github.com/manuseiro).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+
+Sinta-se à vontade para explorar e se divertir com Tiririca Ipsum! Se você tiver alguma sugestão ou melhoria, sinta-se à vontade para contribuir com o projeto.
